@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TabPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0" side="LEFT">
+            <tabs>
+                <Tab text="Global">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="40.0" layoutY="40.0" text="Présentation du carnet"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
 
-<Button fx:id="clickme_button" mnemonicParsing="false" onAction="#somebodyClickOnMe" text="Click Me!" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.telecomnancy.labfx.MainController">
-    <graphic>
-        <ImageView>
-            <Image url="@images/kawai.png"/>
-        </ImageView>
-    </graphic>
-</Button>
+                <Tab text="Page1">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="40.0" layoutY="40.0" text="Contenu de la page 1"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+
+                <Tab text="+">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="40.0" layoutY="40.0" text="Va être supprimé"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

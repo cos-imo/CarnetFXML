@@ -6,6 +6,11 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.control.*; 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.image.ImageView;
+import javafx.application.Platform;
+import javafx.scene.layout.AnchorPane;
 
 import javafx.fxml.FXMLLoader;
 
@@ -17,12 +22,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setTitle("JavaFx Demo");
+        primaryStage.setTitle("Carnet de Voyage");
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/eu/telecomnancy/labfx/Main.fxml"));
-        Parent root = loader.load();
+        AnchorPane root = loader.load();
 
-        Scene scene = new Scene(tabpane, 400, 400);
+       // BorderPane MainPane = new BorderPane();
+
+        //MainPane.setTop(root);
+
+        Scene scene = new Scene(root, 400, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
